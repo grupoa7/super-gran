@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Super Gran · Painel da Equipe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ve:#1e4d2b;--vm:#2d6a3f;--vf:#e7f0e9;--bege:#e8e3d4;--creme:#f0e4c0;--dour:#c9a227;
+--cz:#4a5248;--czc:#8b8f86;--qp:#1a1f1a;--ok:#16a34a;--okbg:#dcfce7;--at:#d97706;--atbg:#fef3c7;--risco:#dc2626;--riscobg:#fee2e2}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Nunito Sans',-apple-system,'Segoe UI',sans-serif;background:var(--vf);color:var(--qp);line-height:1.5;padding-bottom:40px}
+.num{font-family:'JetBrains Mono',monospace;font-feature-settings:'tnum'}
+.header{background:var(--ve);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(30,77,43,.25)}
+.header h1{font-size:1.15rem;font-weight:900;letter-spacing:1.5px}.header .accent{color:var(--dour)}
+.header .sub{font-size:.8rem;opacity:.9;margin-top:2px;font-weight:600}
+.chip{font-size:.7rem;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:4px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-top:6px}
+.container{max-width:640px;margin:0 auto}
+.hero{padding:28px 20px 24px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;right:-20%;width:250px;height:250px;background:radial-gradient(circle,rgba(255,255,255,.15),transparent);border-radius:50%}
+.hero .label{font-size:.78rem;opacity:.92;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;font-weight:800}
+.hero .grande{font-size:2.6rem;font-weight:900;line-height:1;font-family:'JetBrains Mono',monospace}
+.hero .meta-line{font-size:.95rem;opacity:.95;margin-top:8px;font-weight:700}
+.hero .msg{background:rgba(0,0,0,.25);padding:11px 18px;border-radius:12px;font-size:.92rem;font-weight:700;margin:14px auto 0;max-width:520px;backdrop-filter:blur(8px)}
+.hero .pbw{margin:14px auto 0;max-width:480px;background:rgba(0,0,0,.25)}
+.bg-g{background:linear-gradient(135deg,#15803d,#22c55e)}.bg-y{background:linear-gradient(135deg,#b45309,#f59e0b)}.bg-r{background:linear-gradient(135deg,#991b1b,#dc2626)}
+.pbw{height:14px;background:var(--bege);border-radius:8px;overflow:hidden}
+.pb{height:100%;border-radius:8px;background-image:linear-gradient(45deg,rgba(255,255,255,.25) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.25) 50%,rgba(255,255,255,.25) 75%,transparent 75%);background-size:28px 28px}
+.pb-g{background-color:var(--ok)}.pb-y{background-color:var(--at)}.pb-r{background-color:var(--risco)}.pb-n{background-color:var(--czc)}.pb-w{background-color:rgba(255,255,255,.85)}
+.insight{background:var(--creme);border-left:5px solid var(--dour);padding:13px 16px;margin:14px;border-radius:8px;font-size:.92rem;line-height:1.6}
+.insight strong{font-weight:800;color:var(--ve)}
+.section{background:#fff;padding:20px;margin:14px;border-radius:16px;border:1px solid var(--bege)}
+.stitle{font-size:1.1rem;font-weight:800;margin-bottom:6px;color:var(--ve);display:flex;align-items:center;gap:8px}
+.ssub{font-size:.8rem;color:var(--cz);font-weight:600;margin-bottom:14px}
+.dest{border-radius:16px;margin:14px;padding:18px;border:2px solid var(--czc);background:#fff;position:relative}
+.dest-g{border-color:var(--ok);background:var(--okbg)}.dest-y{border-color:var(--at);background:var(--atbg)}
+.dest-r{border-color:var(--risco);background:var(--riscobg)}.dest-n{border-color:var(--bege);background:#fff}
+.dest .tag{position:absolute;top:14px;right:14px;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:8px;background:#fff;letter-spacing:.4px;font-family:'JetBrains Mono',monospace}
+.dest-g .tag{color:var(--ok);border:2px solid var(--ok)}.dest-y .tag{color:var(--at);border:2px solid var(--at)}
+.dest-r .tag{color:var(--risco);border:2px solid var(--risco)}.dest-n .tag{color:var(--cz);border:2px solid var(--czc)}
+.dest .dt{font-size:1rem;font-weight:800;padding-right:110px}
+.dest .dv{font-size:1.7rem;font-weight:900;font-family:'JetBrains Mono',monospace;margin:6px 0 2px}
+.dest .dm{font-size:.82rem;color:var(--cz);font-weight:700}
+.dest .dmsg{margin-top:10px;font-size:.85rem;font-weight:700;background:rgba(255,255,255,.75);border-radius:8px;padding:9px 11px;line-height:1.5}
+.dest .pbw{margin-top:10px}
+.drow{display:grid;grid-template-columns:1fr 74px;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--vf)}
+.drow:last-child{border-bottom:none}
+.drow.zona{opacity:.62}
+.dname{font-size:.92rem;font-weight:700;margin-bottom:3px}
+.dvals{font-size:.85rem;font-weight:700;font-family:'JetBrains Mono',monospace;margin-bottom:6px;color:var(--cz)}
+.dvals .muted{color:var(--czc);font-weight:500;font-size:.78rem}
+.dbw{height:8px;background:var(--bege);border-radius:4px;overflow:hidden}
+.db{height:100%;border-radius:4px}
+.db-g{background:linear-gradient(90deg,#15803d,#22c55e)}.db-y{background:linear-gradient(90deg,#b45309,#f59e0b)}
+.db-r{background:linear-gradient(90deg,#991b1b,#dc2626)}.db-n{background:var(--czc)}
+.dpct{font-size:1rem;font-weight:800;text-align:center;padding:7px 8px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.dp-g{background:var(--okbg);color:var(--ok)}.dp-y{background:var(--atbg);color:var(--at)}.dp-r{background:var(--riscobg);color:var(--risco)}.dp-n{background:var(--bege);color:var(--cz)}
+.crit{padding:14px;border-radius:12px;border:2px solid var(--czc);background:#fff;margin:0 14px 10px;position:relative}
+.crit-g{border-color:var(--ok);background:var(--okbg)}.crit-y{border-color:var(--at);background:var(--atbg)}.crit-r{border-color:var(--risco);background:var(--riscobg)}.crit-n{border-color:var(--bege)}
+.crit .st{position:absolute;top:10px;right:12px;font-size:.66rem;font-weight:800;padding:4px 9px;border-radius:8px;background:#fff;color:var(--cz);letter-spacing:.4px;border:1px solid var(--bege)}
+.crit .cic{font-size:1.25rem;margin-right:6px}
+.crit .cn{font-size:.98rem;font-weight:800;padding-right:98px}
+.crit .cp{font-size:.7rem;font-weight:700;color:var(--czc);font-family:'JetBrains Mono',monospace;margin:2px 0 6px;text-transform:uppercase}
+.crit .cm{font-size:.85rem;color:var(--cz);line-height:1.5;font-weight:600}
+.crit .pts{margin-top:8px;font-size:.82rem;font-weight:800;background:rgba(255,255,255,.8);border-radius:8px;padding:7px 10px}
+.caminho{margin-top:9px;font-size:.83rem;background:var(--creme);border-left:4px solid var(--dour);padding:8px 10px;border-radius:0 8px 8px 0;font-weight:600}
+.hero2{background:linear-gradient(135deg,var(--ve),var(--vm));color:#fff;border-radius:16px;padding:20px;text-align:center;margin:14px}
+.hero2 .nome{font-size:1rem;font-weight:800}
+.hero2 .r{font-size:2.3rem;font-weight:900;color:var(--dour);font-family:'JetBrains Mono',monospace;margin:6px 0 2px}
+.hero2 .s{font-size:.83rem;opacity:.92;line-height:1.55;font-weight:600}
+.prog{display:flex;justify-content:center;gap:5px;margin-top:12px;flex-wrap:wrap}
+.step{font-size:.7rem;font-weight:800;padding:5px 9px;border-radius:14px;background:rgba(255,255,255,.13);color:#cfd6c9;font-family:'JetBrains Mono',monospace}
+.step.cur{background:var(--dour);color:var(--qp)}
+.faixas{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 14px 14px}
+.faixa{background:#fff;border:1px solid var(--bege);border-radius:12px;padding:11px;text-align:center}
+.faixa .p{font-size:.68rem;color:var(--cz);font-weight:800;letter-spacing:.4px}
+.faixa .rr{font-size:.98rem;font-weight:900;margin-top:3px;font-family:'JetBrains Mono',monospace}
+.faixa.alvo{border:2px solid var(--ok);background:var(--okbg)}
+.whats{margin:14px;background:#fff;border:2px solid #25d366;border-radius:16px;padding:16px;text-align:center}
+.whats .wt{font-size:.95rem;font-weight:800;color:var(--ve)}
+.whats .ws{font-size:.82rem;color:var(--cz);font-weight:600;margin:6px 0 10px;line-height:1.5}
+.whats a{display:inline-block;background:#25d366;color:#fff;font-weight:900;text-decoration:none;padding:11px 22px;border-radius:30px;font-size:.95rem}
+.aviso{background:var(--dour);color:var(--qp);font-weight:800;font-size:.78rem;text-align:center;padding:8px;letter-spacing:.3px}
+.star{color:var(--dour);font-size:1.05rem}
+footer{text-align:center;font-size:.72rem;color:var(--czc);margin-top:20px;font-weight:600;padding:0 14px}
+.tbl{width:100%;border-collapse:collapse;font-size:.9rem;border-radius:10px;overflow:hidden}
+.tbl th{background:var(--ve);color:#fff;padding:8px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:9px 10px;border-top:1px solid var(--bege);font-weight:700}
+.tbl tr:last-child td{background:var(--okbg);color:var(--ve);font-weight:900}
+.ritmo{margin-top:7px;font-size:.8rem;font-weight:800;color:var(--ve);background:rgba(255,255,255,.75);border:1px dashed var(--dour);border-radius:8px;padding:6px 9px;font-family:'JetBrains Mono',monospace}
+</style></head><body><div class="aviso">🚀 PROGRAMA LANÇADO · 1º RADAR: SEXTA-FEIRA, 31/07</div><div class="header"><h1>SUPER <span class="accent">GRAN</span></h1>
+<div class="sub">Painel da Equipe · Caminho das Árvores</div><span class="chip">3º TRI 2026 · JUL AGO SET · RADAR TODA SEXTA</span></div><div class="container"><div class="hero bg-y"><div class="label">Meta do trimestre: vender R$ 1.500.000</div>
+<div class="grande">R$ 357.683</div>
+<div class="meta-line">vendido · esperado até hoje: R$ 375.000 · <span class="num">95%</span> do ritmo</div>
+<div class="pbw"><div class="pb pb-w" style="width:24%"></div></div>
+<div class="meta-line" style="font-size:.8rem;opacity:.85">24% da meta · dia 23 de 92 · ritmo: R$ 16.300/dia · R$ 114.000/semana</div>
+<div class="msg">⚡ Falta pouco para o ritmo da meta. Semana forte recupera.</div></div><div class="dest dest-n"><span class="tag">⏳ 1º RADAR</span>
+<div class="dt">🥬 SUPER META: Perdas abaixo de 4%</div><div class="dv num">vale 40 pontos</div><div class="dm">De agosto a setembro: fechar toda semana abaixo de 4% do que a loja vende</div>
+<div class="pbw"><div class="pb pb-n" style="width:0%"></div></div>
+<div class="dmsg">🛡️ Validade em dia e manuseio com cuidado protegem os 40 pontos de todos.</div></div><div class="dest dest-n"><span class="tag">⏳ 1º RADAR</span>
+<div class="dt">🚶 Clientes na loja</div><div class="dv num">19.200</div><div class="dm">De agosto a setembro · 356/dia útil · 258/sábado · 191/domingo e feriado</div>
+<div class="pbw"><div class="pb pb-n" style="width:0%"></div></div>
+<div class="dmsg">🤝 Loja sem fila e gôndola cheia. Cliente bem atendido volta.</div></div><div class="dest dest-n"><span class="tag">⏳ 1º RADAR</span>
+<div class="dt">👥 Time certo</div><div class="dv num">17 pessoas</div><div class="dm">Fechar 30/09 com 17 pessoas no time (Gran + GMPro)</div>
+<div class="pbw"><div class="pb pb-n" style="width:0%"></div></div>
+<div class="dmsg">💚 Time enxuto e eficiente garante prêmio para todos.</div></div><div class="insight">💡 <strong>Julho é o nosso treino:</strong> os números de julho aparecem como exemplo. A medição que vale começa em 01/08, exceto as vendas da loja, que contam o trimestre inteiro. Estes quadros são a pauta da reunião de resultados.</div><div class="section"><div class="stitle">🏆 Ranking do trimestre</div><div class="ssub">Atualiza toda sexta. Valores em R$ só na página exclusiva de cada um.</div><div class="drow"><div><div class="dname">Alyne</div><div class="dvals"><span class="muted">Liderança</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Grasiela</div><div class="dvals"><span class="muted">Caixa</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Jilney</div><div class="dvals"><span class="muted">OPL</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Luciene</div><div class="dvals"><span class="muted">OPL</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Magno</div><div class="dvals"><span class="muted">Cozinha</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Joselene</div><div class="dvals"><span class="muted">Cozinha</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Solange</div><div class="dvals"><span class="muted">Cozinha</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Fernanda</div><div class="dvals"><span class="muted">Cozinha</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Manu</div><div class="dvals"><span class="muted">Cozinha</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Elissandro</div><div class="dvals"><span class="muted">Suprimentos</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Emilly</div><div class="dvals"><span class="muted">Suprimentos</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div><div class="drow"><div><div class="dname">Jamilton</div><div class="dvals"><span class="muted">Delivery</span></div>
+<div class="dbw"><div class="db db-n" style="width:0%"></div></div></div><div class="dpct dp-n">···</div></div></div><div class="section"><div class="stitle">📌 Como funciona</div>
+<table class="tbl">
+<tr><th>Sua pontuação</th><th>Seu prêmio</th></tr>
+<tr><td class="num">até 159</td><td>sem prêmio</td></tr>
+<tr><td class="num">160 a 165</td><td class="num">70% do valor</td></tr>
+<tr><td class="num">166 a 175</td><td class="num">90% do valor</td></tr>
+<tr><td class="num">acima de 175</td><td class="num">100% ⭐</td></tr>
+</table>
+<div class="ssub" style="margin:10px 0 0">7 metas · 199 pontos possíveis · meta com número: bateu, levou. Radar novo toda sexta com a Fran.</div></div><footer>Ser Gran, e juntos ser SUPER. · Programa Super Gran · Grupo A7</footer></div></body></html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Super Gran · Magno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ve:#1e4d2b;--vm:#2d6a3f;--vf:#e7f0e9;--bege:#e8e3d4;--creme:#f0e4c0;--dour:#c9a227;
+--cz:#4a5248;--czc:#8b8f86;--qp:#1a1f1a;--ok:#16a34a;--okbg:#dcfce7;--at:#d97706;--atbg:#fef3c7;--risco:#dc2626;--riscobg:#fee2e2}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Nunito Sans',-apple-system,'Segoe UI',sans-serif;background:var(--vf);color:var(--qp);line-height:1.5;padding-bottom:40px}
+.num{font-family:'JetBrains Mono',monospace;font-feature-settings:'tnum'}
+.header{background:var(--ve);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(30,77,43,.25)}
+.header h1{font-size:1.15rem;font-weight:900;letter-spacing:1.5px}.header .accent{color:var(--dour)}
+.header .sub{font-size:.8rem;opacity:.9;margin-top:2px;font-weight:600}
+.chip{font-size:.7rem;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:4px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-top:6px}
+.container{max-width:640px;margin:0 auto}
+.hero{padding:28px 20px 24px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;right:-20%;width:250px;height:250px;background:radial-gradient(circle,rgba(255,255,255,.15),transparent);border-radius:50%}
+.hero .label{font-size:.78rem;opacity:.92;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;font-weight:800}
+.hero .grande{font-size:2.6rem;font-weight:900;line-height:1;font-family:'JetBrains Mono',monospace}
+.hero .meta-line{font-size:.95rem;opacity:.95;margin-top:8px;font-weight:700}
+.hero .msg{background:rgba(0,0,0,.25);padding:11px 18px;border-radius:12px;font-size:.92rem;font-weight:700;margin:14px auto 0;max-width:520px;backdrop-filter:blur(8px)}
+.hero .pbw{margin:14px auto 0;max-width:480px;background:rgba(0,0,0,.25)}
+.bg-g{background:linear-gradient(135deg,#15803d,#22c55e)}.bg-y{background:linear-gradient(135deg,#b45309,#f59e0b)}.bg-r{background:linear-gradient(135deg,#991b1b,#dc2626)}
+.pbw{height:14px;background:var(--bege);border-radius:8px;overflow:hidden}
+.pb{height:100%;border-radius:8px;background-image:linear-gradient(45deg,rgba(255,255,255,.25) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.25) 50%,rgba(255,255,255,.25) 75%,transparent 75%);background-size:28px 28px}
+.pb-g{background-color:var(--ok)}.pb-y{background-color:var(--at)}.pb-r{background-color:var(--risco)}.pb-n{background-color:var(--czc)}.pb-w{background-color:rgba(255,255,255,.85)}
+.insight{background:var(--creme);border-left:5px solid var(--dour);padding:13px 16px;margin:14px;border-radius:8px;font-size:.92rem;line-height:1.6}
+.insight strong{font-weight:800;color:var(--ve)}
+.section{background:#fff;padding:20px;margin:14px;border-radius:16px;border:1px solid var(--bege)}
+.stitle{font-size:1.1rem;font-weight:800;margin-bottom:6px;color:var(--ve);display:flex;align-items:center;gap:8px}
+.ssub{font-size:.8rem;color:var(--cz);font-weight:600;margin-bottom:14px}
+.dest{border-radius:16px;margin:14px;padding:18px;border:2px solid var(--czc);background:#fff;position:relative}
+.dest-g{border-color:var(--ok);background:var(--okbg)}.dest-y{border-color:var(--at);background:var(--atbg)}
+.dest-r{border-color:var(--risco);background:var(--riscobg)}.dest-n{border-color:var(--bege);background:#fff}
+.dest .tag{position:absolute;top:14px;right:14px;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:8px;background:#fff;letter-spacing:.4px;font-family:'JetBrains Mono',monospace}
+.dest-g .tag{color:var(--ok);border:2px solid var(--ok)}.dest-y .tag{color:var(--at);border:2px solid var(--at)}
+.dest-r .tag{color:var(--risco);border:2px solid var(--risco)}.dest-n .tag{color:var(--cz);border:2px solid var(--czc)}
+.dest .dt{font-size:1rem;font-weight:800;padding-right:110px}
+.dest .dv{font-size:1.7rem;font-weight:900;font-family:'JetBrains Mono',monospace;margin:6px 0 2px}
+.dest .dm{font-size:.82rem;color:var(--cz);font-weight:700}
+.dest .dmsg{margin-top:10px;font-size:.85rem;font-weight:700;background:rgba(255,255,255,.75);border-radius:8px;padding:9px 11px;line-height:1.5}
+.dest .pbw{margin-top:10px}
+.drow{display:grid;grid-template-columns:1fr 74px;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--vf)}
+.drow:last-child{border-bottom:none}
+.drow.zona{opacity:.62}
+.dname{font-size:.92rem;font-weight:700;margin-bottom:3px}
+.dvals{font-size:.85rem;font-weight:700;font-family:'JetBrains Mono',monospace;margin-bottom:6px;color:var(--cz)}
+.dvals .muted{color:var(--czc);font-weight:500;font-size:.78rem}
+.dbw{height:8px;background:var(--bege);border-radius:4px;overflow:hidden}
+.db{height:100%;border-radius:4px}
+.db-g{background:linear-gradient(90deg,#15803d,#22c55e)}.db-y{background:linear-gradient(90deg,#b45309,#f59e0b)}
+.db-r{background:linear-gradient(90deg,#991b1b,#dc2626)}.db-n{background:var(--czc)}
+.dpct{font-size:1rem;font-weight:800;text-align:center;padding:7px 8px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.dp-g{background:var(--okbg);color:var(--ok)}.dp-y{background:var(--atbg);color:var(--at)}.dp-r{background:var(--riscobg);color:var(--risco)}.dp-n{background:var(--bege);color:var(--cz)}
+.crit{padding:14px;border-radius:12px;border:2px solid var(--czc);background:#fff;margin:0 14px 10px;position:relative}
+.crit-g{border-color:var(--ok);background:var(--okbg)}.crit-y{border-color:var(--at);background:var(--atbg)}.crit-r{border-color:var(--risco);background:var(--riscobg)}.crit-n{border-color:var(--bege)}
+.crit .st{position:absolute;top:10px;right:12px;font-size:.66rem;font-weight:800;padding:4px 9px;border-radius:8px;background:#fff;color:var(--cz);letter-spacing:.4px;border:1px solid var(--bege)}
+.crit .cic{font-size:1.25rem;margin-right:6px}
+.crit .cn{font-size:.98rem;font-weight:800;padding-right:98px}
+.crit .cp{font-size:.7rem;font-weight:700;color:var(--czc);font-family:'JetBrains Mono',monospace;margin:2px 0 6px;text-transform:uppercase}
+.crit .cm{font-size:.85rem;color:var(--cz);line-height:1.5;font-weight:600}
+.crit .pts{margin-top:8px;font-size:.82rem;font-weight:800;background:rgba(255,255,255,.8);border-radius:8px;padding:7px 10px}
+.caminho{margin-top:9px;font-size:.83rem;background:var(--creme);border-left:4px solid var(--dour);padding:8px 10px;border-radius:0 8px 8px 0;font-weight:600}
+.hero2{background:linear-gradient(135deg,var(--ve),var(--vm));color:#fff;border-radius:16px;padding:20px;text-align:center;margin:14px}
+.hero2 .nome{font-size:1rem;font-weight:800}
+.hero2 .r{font-size:2.3rem;font-weight:900;color:var(--dour);font-family:'JetBrains Mono',monospace;margin:6px 0 2px}
+.hero2 .s{font-size:.83rem;opacity:.92;line-height:1.55;font-weight:600}
+.prog{display:flex;justify-content:center;gap:5px;margin-top:12px;flex-wrap:wrap}
+.step{font-size:.7rem;font-weight:800;padding:5px 9px;border-radius:14px;background:rgba(255,255,255,.13);color:#cfd6c9;font-family:'JetBrains Mono',monospace}
+.step.cur{background:var(--dour);color:var(--qp)}
+.faixas{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 14px 14px}
+.faixa{background:#fff;border:1px solid var(--bege);border-radius:12px;padding:11px;text-align:center}
+.faixa .p{font-size:.68rem;color:var(--cz);font-weight:800;letter-spacing:.4px}
+.faixa .rr{font-size:.98rem;font-weight:900;margin-top:3px;font-family:'JetBrains Mono',monospace}
+.faixa.alvo{border:2px solid var(--ok);background:var(--okbg)}
+.whats{margin:14px;background:#fff;border:2px solid #25d366;border-radius:16px;padding:16px;text-align:center}
+.whats .wt{font-size:.95rem;font-weight:800;color:var(--ve)}
+.whats .ws{font-size:.82rem;color:var(--cz);font-weight:600;margin:6px 0 10px;line-height:1.5}
+.whats a{display:inline-block;background:#25d366;color:#fff;font-weight:900;text-decoration:none;padding:11px 22px;border-radius:30px;font-size:.95rem}
+.aviso{background:var(--dour);color:var(--qp);font-weight:800;font-size:.78rem;text-align:center;padding:8px;letter-spacing:.3px}
+.star{color:var(--dour);font-size:1.05rem}
+footer{text-align:center;font-size:.72rem;color:var(--czc);margin-top:20px;font-weight:600;padding:0 14px}
+.tbl{width:100%;border-collapse:collapse;font-size:.9rem;border-radius:10px;overflow:hidden}
+.tbl th{background:var(--ve);color:#fff;padding:8px 10px;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:9px 10px;border-top:1px solid var(--bege);font-weight:700}
+.tbl tr:last-child td{background:var(--okbg);color:var(--ve);font-weight:900}
+.ritmo{margin-top:7px;font-size:.8rem;font-weight:800;color:var(--ve);background:rgba(255,255,255,.75);border:1px dashed var(--dour);border-radius:8px;padding:6px 9px;font-family:'JetBrains Mono',monospace}
+</style></head><body><div class="aviso">🔒 Página exclusiva de Magno · não compartilhe este link</div><div class="header"><h1>SUPER <span class="accent">GRAN</span></h1>
+<div class="sub">Magno Oliveira · Cozinheiro</div><span class="chip">3º TRI 2026 · JUL AGO SET · RADAR TODA SEXTA</span></div><div class="container"><div class="hero2"><div class="nome">Seu prêmio em jogo</div>
+<div class="r">R$ 873,60</div>
+<div class="s">passando de 175 pontos · seu percentual hoje: <b>14%</b> do salário do trimestre<br>Bata este trimestre e suba para <b>16%</b> no próximo 🚀</div>
+<div class="prog"><span class="step">10%</span><span class="step">12%</span><span class="step cur">14%</span><span class="step">16%</span><span class="step">18%</span><span class="step">20%</span></div></div>
+<div class="faixas">
+<div class="faixa"><div class="p">160 A 165 PTS</div><div class="rr">R$ 612</div><div class="p">70%</div></div>
+<div class="faixa"><div class="p">166 A 175 PTS</div><div class="rr">R$ 786</div><div class="p">90%</div></div>
+<div class="faixa alvo"><div class="p">176+ PTS ⭐</div><div class="rr">R$ 874</div><div class="p">100%</div></div></div><div class="section" style="padding-bottom:8px"><div class="stitle">📋 Suas metas</div><div class="ssub">Cores atualizam toda sexta: 🟢 no caminho · 🟡 atenção · 🔴 em risco</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">💰</span>Vendas da loja</div><div class="cp">33 pontos · meta de todos</div>
+<div class="cm">Vender R$ 1.500.000 no trimestre</div>
+<div class="ritmo">📊 R$ 16.300 por dia · R$ 114.000 por semana</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">👥</span>Time certo</div><div class="cp">33 pontos · meta de todos</div>
+<div class="cm">Fechar setembro com 17 pessoas no time (Gran + GMPro)</div>
+<div class="ritmo">📊 Conferido a cada Radar de sexta</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">⏰</span>Presença e horário</div><div class="cp">33 pontos · meta sua</div>
+<div class="cm">Até 6 atrasos de mais de 15 min sem avisar (vale pro descanso também) · até 1 falta sem justificar, avisando 1h antes · até 1 atestado</div>
+<div class="ritmo">📊 Conta a partir de 01/08 · saldo atualiza toda sexta</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">🥬</span>SUPER META: Perdas</div><div class="cp">40 pontos · meta de todos</div>
+<div class="cm">Perder menos de 4% do que a loja vende, de agosto a setembro. 3,9% vale os 40 pontos. 4% não vale</div>
+<div class="ritmo">📊 Fechar toda semana abaixo de 4% · vale a partir de 01/08</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">🚶</span>Clientes na loja</div><div class="cp">20 pontos · meta de todos</div>
+<div class="cm">Atender 19.200 clientes de agosto a setembro</div>
+<div class="ritmo">📊 356/dia útil · 258/sábado · 191/domingo e feriado · vale a partir de 01/08</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">🍽️</span>Gran Mesa da loja</div><div class="cp">20 pontos</div>
+<div class="cm">A produção Gran vender R$ 1.000 por dia. Meta do time da cozinha</div>
+<div class="ritmo">📊 R$ 1.000 por dia · R$ 7.000 por semana · vale a partir de 01/08</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
+<div class="cn"><span class="cic">👨‍🍳</span>Minha produção</div><div class="cp">20 pontos</div>
+<div class="cm">Vender os produtos que EU preparei</div>
+<div class="ritmo">📊 R$ 400 por dia · R$ 2.800 por semana · vale a partir de 01/08</div>
+<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
+<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="whats"><div class="wt">💬 Dúvida ou quer revisar uma pontuação?</div>
+<div class="ws">Fale com o RH em até 48h após cada Radar, trazendo suas evidências.</div>
+<a href="https://wa.me/5571996347896">WhatsApp do RH · (71) 99634-7896</a></div><footer>Radar toda sexta-feira · Super Gran · Grupo A7</footer></div></body></html>
