@@ -86,24 +86,40 @@ footer{text-align:center;font-size:.72rem;color:var(--czc);margin-top:20px;font-
 .tbl td{padding:9px 10px;border-top:1px solid var(--bege);font-weight:700}
 .tbl tr:last-child td{background:var(--okbg);color:var(--ve);font-weight:900}
 .ritmo{margin-top:7px;font-size:.8rem;font-weight:800;color:var(--ve);background:rgba(255,255,255,.75);border:1px dashed var(--dour);border-radius:8px;padding:6px 9px;font-family:'JetBrains Mono',monospace}
-</style></head><body><div class="aviso">🔒 Página exclusiva de Marize · não compartilhe este link</div><div class="header"><h1>SUPER <span class="accent">GRAN</span></h1>
-<div class="sub">Marize Nascimento · Líder Comercial</div><span class="chip">3º TRI 2026 · JUL AGO SET · RADAR TODA SEXTA</span></div><div class="container"><div class="hero2"><div class="nome">Prêmio sobre as vendas da loja</div>
-<div class="r">0,3%</div>
-<div class="s">de tudo que a loja vender · até <b>R$ 4.500</b> com a meta batida<br>3 metas · cada uma vale um terço do prêmio</div></div><div class="section" style="padding-bottom:8px"><div class="stitle">📋 Suas metas</div><div class="ssub">Cores atualizam toda sexta: 🟢 no caminho · 🟡 atenção · 🔴 em risco</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
-<div class="cn"><span class="cic">👥</span>Time certo</div><div class="cp">1/3 do prêmio</div>
-<div class="cm">Fechar o trimestre com no máximo 17 pessoas no time (Gran + GMPro)</div>
-<div class="ritmo">📊 Conferido a cada Radar</div>
-<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
-<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
-<div class="cn"><span class="cic">🧾</span>Compras sob controle</div><div class="cp">1/3 do prêmio</div>
-<div class="cm">Gastar com compras no máximo 62% do que a loja vender</div>
-<div class="ritmo">📊 Percentual conferido toda semana</div>
-<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
-<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="crit crit-n"><span class="st">⏳ 1º RADAR 31/07</span>
-<div class="cn"><span class="cic">🥬</span>Perdas</div><div class="cp">1/3 do prêmio</div>
-<div class="cm">Perder menos de 4% do que a loja vende</div>
-<div class="ritmo">📊 Fechar toda semana abaixo de 4%</div>
-<div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div>
-<div class="pts">Pontos hoje: primeira medição sai sexta</div></div><div class="whats"><div class="wt">💬 Dúvida ou quer revisar uma pontuação?</div>
-<div class="ws">Fale com o RH em até 48h após cada Radar, trazendo suas evidências.</div>
-<a href="https://wa.me/5571996347896">WhatsApp do RH · (71) 99634-7896</a></div><footer>Radar toda sexta-feira · Super Gran · Grupo A7</footer></div></body></html>
+
+/* Padrao visual de regra: numero grande + rotulo curto (nada de paragrafo denso) */
+.rgl{display:flex;align-items:center;gap:9px;margin:7px 0}
+.rgl .n{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.15rem;background:rgba(30,77,43,.09);color:var(--ve);border-radius:8px;min-width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.rgl .t{line-height:1.28;font-size:.9rem}
+.rmini{font-size:.78rem;opacity:.68;margin-top:5px}
+
+/* KPIs: trio de numeros que a equipe decora */
+.kpis{display:flex;gap:8px;margin:9px 0}
+.kpi{flex:1;background:rgba(30,77,43,.05);border-radius:10px;padding:9px 6px;text-align:center}
+.kpi .kv{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.98rem;color:var(--ve)}
+.kpi .kl{font-size:.67rem;opacity:.72;margin-top:2px;line-height:1.18}
+/* Tracker mensal (perdas) */
+.mtrack{display:flex;gap:8px;margin:9px 0}
+.mbox{flex:1;border-radius:10px;padding:8px 4px;text-align:center;border:1px solid rgba(0,0,0,.05)}
+.mbox .mm{font-size:.65rem;font-weight:800;letter-spacing:.5px;opacity:.75}
+.mbox .mv{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1rem;margin-top:3px}
+.mb-g{background:var(--okbg)}.mb-g .mv{color:#15803d}
+.mb-y{background:var(--atbg)}.mb-y .mv{color:#b45309}
+.mb-r{background:var(--riscobg)}.mb-r .mv{color:#b91c1c}
+.mb-n{background:#f1f0ea}.mb-n .mv{color:#9a9a90}
+/* Grafico de ritmo */
+.chartwrap{background:#fff;border-radius:14px;padding:12px 10px 8px;margin:12px 0;box-shadow:0 1px 8px rgba(30,77,43,.08)}
+.chartwrap .ctitle{font-size:.84rem;font-weight:800;color:var(--ve);margin:0 2px 2px}
+.chartwrap .csub{font-size:.72rem;opacity:.7;margin:0 2px 8px}
+.chartwrap canvas{width:100%!important;max-height:230px}
+/* aviso fino dentro de criterio */
+.tol{font-size:.76rem;background:rgba(30,77,43,.06);border-radius:7px;padding:5px 8px;margin:6px 0 2px;opacity:.9}
+
+/* card neutro (perdas) para dar contraste aos quadros coloridos */
+.dest-plain{background:#fff;border:1px solid rgba(0,0,0,.08)}
+.mb-g{border:1px solid #86efac}.mb-y{border:1px solid #fcd34d}.mb-r{border:1px solid #fca5a5}
+.mb-n{border:1px solid #e2e0d6}
+.chartwrap.mini canvas{max-height:190px}
+
+.crit-plain{background:#fff;border-left:4px solid #c9a227}
+</style></head><body><div class="aviso">🔒 Página exclusiva de Marize · não compartilhe este link</div><div class="header"><h1>SUPER <span class="accent">GRAN</span></h1><div class="sub">Marize Nascimento · Líder Comercial</div><span class="chip">3º TRI 2026 · JUL AGO SET · RADAR TODA SEXTA</span></div><div class="container"><div class="hero2"><div class="nome">Prêmio sobre as vendas da loja</div><div class="r">0,3%</div><div class="s">de tudo que a loja vender · até <b>R$ 4.500</b> com a meta batida<br>3 metas · cada uma vale um terço do prêmio</div></div><div class="section" style="padding-bottom:8px"><div class="stitle">📋 Suas metas</div><div class="ssub">Cores atualizam toda sexta: 🟢 no caminho · 🟡 atenção · 🔴 em risco</div></div><div class="crit crit-y"><span class="st">🟡 atenção</span><div class="cn"><span class="cic">👥</span>Time certo</div><div class="cp">1/3 do prêmio</div><div class="cm">Fechar o trimestre com no máximo 17 pessoas no time (Gran + GMPro)</div><div class="ritmo">📊 Conferido a cada Radar</div><div class="dbw" style="margin-top:9px"><div class="db db-y" style="width:60%"></div></div><div class="pts">Pontos hoje: atenção</div></div><div class="crit crit-n"><span class="st">⏳ APRESENTAÇÃO</span><div class="cn"><span class="cic">🧾</span>Compras sob controle</div><div class="cp">1/3 do prêmio</div><div class="cm">Gastar com compras no máximo 62% do que a loja vender</div><div class="ritmo">📊 Percentual conferido toda semana</div><div class="dbw" style="margin-top:9px"><div class="db db-n" style="width:0%"></div></div><div class="pts">Pontos hoje: primeira medição que vale sai em 07/08</div></div><div class="crit crit-g"><span class="st">🟢 no caminho</span><div class="cn"><span class="cic">🥬</span>Perdas</div><div class="cp">1/3 do prêmio</div><div class="cm">Perder menos de 4% do que a loja vende, em cada mês</div><div class="ritmo">📊 Vale a partir de 01/08</div><div class="dbw" style="margin-top:9px"><div class="db db-g" style="width:100%"></div></div><div class="pts">Pontos hoje: no caminho</div></div><div class="whats"><div class="wt">💬 Dúvida ou quer revisar uma pontuação?</div><div class="ws">Fale com o RH em até 48h após cada Radar, trazendo suas evidências.</div><a href="https://wa.me/5571996347896">WhatsApp do RH · (71) 99634-7896</a></div><footer>Radar toda sexta-feira · Super Gran · Grupo A7</footer></div></body></html>
