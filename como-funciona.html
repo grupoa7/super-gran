@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Gran · Como funciona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ve:#1e4d2b;--vm:#2d6a3f;--vf:#e7f0e9;--bege:#e8e3d4;--creme:#f0e4c0;--dour:#c9a227;
+--cz:#4a5248;--czc:#8b8f86;--qp:#1a1f1a;--ok:#16a34a;--okbg:#dcfce7;--at:#d97706;--atbg:#fef3c7;--risco:#dc2626;--riscobg:#fee2e2}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Nunito Sans',-apple-system,'Segoe UI',sans-serif;background:var(--vf);color:var(--qp);line-height:1.5;padding-bottom:48px}
+.num{font-family:'JetBrains Mono',monospace;font-feature-settings:'tnum'}
+.header{background:var(--ve);color:#fff;padding:16px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(30,77,43,.25)}
+.header h1{font-size:1.15rem;font-weight:900;letter-spacing:1.5px}
+.header .accent{color:var(--dour)}
+.header .sub{font-size:.8rem;opacity:.9;margin-top:2px;font-weight:600}
+.chip{font-size:.7rem;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:4px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-top:6px}
+.wrap{max-width:620px;margin:0 auto}
+.sec{margin:14px}
+.sec>h2{font-size:.75rem;font-weight:900;color:var(--czc);letter-spacing:1.2px;text-transform:uppercase;margin:22px 0 10px;padding-left:2px}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(30,77,43,.07)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--ve),var(--vm));color:#fff;border-radius:16px;padding:24px 20px;margin:14px;text-align:center}
+.hero .kicker{font-size:.72rem;font-weight:800;letter-spacing:1.4px;color:var(--dour);text-transform:uppercase}
+.hero h2{font-size:1.5rem;font-weight:900;margin:8px 0 6px;line-height:1.22}
+.hero p{font-size:.9rem;opacity:.93;font-weight:600}
+
+/* NOVIDADES */
+.nov{display:grid;gap:10px;margin:14px}
+.nov .n{background:#fff;border-radius:14px;padding:15px 16px;display:flex;gap:13px;align-items:flex-start;box-shadow:0 2px 10px rgba(30,77,43,.07);border-left:5px solid var(--dour)}
+.nov .ic{font-size:1.6rem;line-height:1}
+.nov .t{font-size:1rem;font-weight:900;color:var(--ve)}
+.nov .d{font-size:.86rem;color:var(--cz);font-weight:600;margin-top:3px}
+
+/* RESUMO */
+.linhas{list-style:none;display:grid;gap:9px}
+.linhas li{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:600;color:var(--cz)}
+.linhas b{color:var(--qp)}
+.bul{color:var(--dour);font-weight:900}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.87rem}
+th{background:var(--ve);color:#fff;font-size:.7rem;letter-spacing:.7px;text-transform:uppercase;padding:8px 10px;text-align:left;font-weight:800}
+td{padding:9px 10px;border-bottom:1px solid var(--bege);font-weight:700}
+tr:last-child td{border-bottom:none}
+.tr-ok td{background:var(--okbg)}
+.tr-star td{background:var(--creme)}
+.escada{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.escada span{font-size:.78rem;font-weight:800;background:var(--vf);color:var(--vm);padding:5px 9px;border-radius:7px;font-family:'JetBrains Mono',monospace}
+.escada span.top{background:var(--dour);color:#fff}
+
+/* METAS */
+.meta{background:#fff;border-radius:16px;padding:17px;margin-bottom:11px;box-shadow:0 2px 10px rgba(30,77,43,.07);border-top:5px solid var(--vm)}
+.meta.super{border-top-color:var(--dour);background:linear-gradient(#fffdf5,#fff)}
+.meta .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.meta .tit{font-size:1.08rem;font-weight:900;color:var(--ve);line-height:1.25}
+.meta .pts{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:800;background:var(--ve);color:#fff;padding:4px 9px;border-radius:6px;white-space:nowrap}
+.meta.super .pts{background:var(--dour)}
+.meta .quem{font-size:.68rem;font-weight:800;color:var(--czc);text-transform:uppercase;letter-spacing:.8px;margin-top:4px}
+.meta .regua{font-size:.92rem;font-weight:700;color:var(--qp);margin-top:9px;line-height:1.5}
+.numeros{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.numeros div{flex:1;min-width:88px;background:var(--vf);border-radius:10px;padding:9px 8px;text-align:center}
+.numeros .v{font-family:'JetBrains Mono',monospace;font-size:1.02rem;font-weight:800;color:var(--ve)}
+.numeros .l{font-size:.68rem;font-weight:700;color:var(--czc);margin-top:2px;line-height:1.3}
+.pratica{margin-top:12px;background:var(--creme);border-left:4px solid var(--dour);border-radius:0 10px 10px 0;padding:11px 12px}
+.pratica .h{font-size:.72rem;font-weight:900;color:var(--ve);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.pratica ul{list-style:none;display:grid;gap:6px}
+.pratica li{font-size:.85rem;font-weight:600;color:var(--cz);line-height:1.45;padding-left:14px;position:relative}
+.pratica li::before{content:"›";position:absolute;left:0;color:var(--dour);font-weight:900}
+.pratica li b{color:var(--ve);font-weight:900}
+.alerta{margin-top:10px;background:var(--riscobg);border-radius:10px;padding:10px 12px;font-size:.84rem;font-weight:700;color:#991b1b;line-height:1.45}
+
+/* PASSOS */
+.passos{list-style:none;counter-reset:p;display:grid;gap:10px}
+.passos li{counter-increment:p;display:flex;gap:12px;align-items:flex-start;font-size:.89rem;font-weight:600;color:var(--cz);line-height:1.5}
+.passos li::before{content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:var(--ve);color:#fff;font-weight:900;font-size:.8rem;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace}
+.passos b{color:var(--qp)}
+
+/* CORES */
+.cores{display:grid;gap:8px;margin-top:4px}
+.cores div{border-radius:10px;padding:10px 12px;font-size:.87rem;font-weight:700}
+.c-ok{background:var(--okbg);color:#14532d}
+.c-at{background:var(--atbg);color:#78350f}
+.c-ri{background:var(--riscobg);color:#7f1d1d}
+
+/* AGENDA */
+.agenda{display:grid;gap:0}
+.ag{display:flex;gap:13px;padding:11px 0;border-bottom:1px dashed var(--bege)}
+.ag:last-child{border-bottom:none}
+.ag .d{font-family:'JetBrains Mono',monospace;font-weight:800;color:var(--dour);font-size:.82rem;flex:none;width:62px;padding-top:1px}
+.ag .t{font-size:.88rem;font-weight:700;color:var(--qp)}
+.ag .s{font-size:.8rem;font-weight:600;color:var(--cz);margin-top:2px}
+
+/* FECHO */
+.fecho{background:linear-gradient(135deg,var(--ve),var(--vm));color:#fff;border-radius:16px;padding:26px 20px;margin:20px 14px 8px;text-align:center}
+.fecho .f1{font-size:1.22rem;font-weight:900;line-height:1.35}
+.fecho .f2{font-size:.88rem;opacity:.92;font-weight:600;margin-top:9px}
+.fecho .f3{font-size:.95rem;font-weight:900;color:var(--dour);margin-top:14px;letter-spacing:.4px}
+.rodape{text-align:center;font-size:.74rem;color:var(--czc);font-weight:700;margin:16px 14px;line-height:1.6}
+.btn{display:block;background:var(--dour);color:#fff;text-align:center;font-weight:900;font-size:.92rem;padding:14px;border-radius:12px;text-decoration:none;margin:14px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>SUPER <span class="accent">GRAN</span></h1>
+  <div class="sub">Como funciona · guia da equipe</div>
+  <span class="chip">3º TRI 2026 · JUL AGO SET · RADAR TODA SEXTA</span>
+</div>
+
+<div class="wrap">
+
+<div class="hero">
+  <div class="kicker">O jogo ficou mais simples</div>
+  <h2>Você já conhece o Super&nbsp;Gran.<br>Agora ele cabe na palma da mão.</h2>
+  <p>Três mudanças neste trimestre. Leia em 5 minutos e saiba exatamente o que fazer amanhã de manhã.</p>
+</div>
+
+<div class="sec"><h2>O que mudou</h2></div>
+<div class="nov">
+  <div class="n">
+    <div class="ic">📱</div>
+    <div><div class="t">Agora tem painel</div>
+    <div class="d">Cada um tem uma página só sua, no celular. Toda sexta ela atualiza sozinha e mostra em que pé está cada meta. Chega de descobrir o resultado só no fim do trimestre.</div></div>
+  </div>
+  <div class="n">
+    <div class="ic">🎯</div>
+    <div><div class="t">Menos metas</div>
+    <div class="d">São 7 metas, e 6 delas são iguais para todo mundo. Só uma muda conforme a sua função. Menos coisa pra lembrar, mais foco no que importa.</div></div>
+  </div>
+  <div class="n">
+    <div class="ic">🔢</div>
+    <div><div class="t">Quase tudo virou número</div>
+    <div class="d">Nada de achismo ou de opinião no fim do trimestre. O sistema mede, o painel mostra. Bateu o número, levou os pontos.</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>O programa em 30 segundos</h2>
+  <div class="card">
+    <ul class="linhas">
+      <li><span class="bul">●</span><span>É um <b>prêmio em dinheiro</b> pago a cada 3 meses para quem cumpre as metas e vive os valores da casa.</span></li>
+      <li><span class="bul">●</span><span>São <b>199 pontos possíveis</b>, divididos nas 7 metas.</span></li>
+      <li><span class="bul">●</span><span><b>160 pontos ou mais</b> é trimestre batido. Abaixo disso não tem prêmio.</span></li>
+      <li><span class="bul">●</span><span>O valor do prêmio está na <b>sua página exclusiva</b>. Só você vê o seu.</span></li>
+    </ul>
+
+    <table>
+      <tr><th>Sua pontuação</th><th>Seu prêmio</th></tr>
+      <tr><td class="num">até 159</td><td>sem prêmio</td></tr>
+      <tr class="tr-ok"><td class="num">160 a 165</td><td>70% do valor</td></tr>
+      <tr class="tr-ok"><td class="num">166 a 175</td><td>90% do valor</td></tr>
+      <tr class="tr-star"><td class="num">acima de 175</td><td>100% + Estrela ⭐</td></tr>
+    </table>
+
+    <div class="pratica" style="margin-top:14px">
+      <div class="h">A escada que faz o prêmio crescer</div>
+      <ul>
+        <li>Todo mundo começa em <b>10%</b> do salário do trimestre.</li>
+        <li>A cada trimestre batido, sobe <b>2 pontos</b>. Bateu de novo, sobe de novo, até o teto de <b>20%</b>.</li>
+        <li>Não bateu, volta pra 10% e recomeça a subida.</li>
+      </ul>
+      <div class="escada">
+        <span>10%</span><span>12%</span><span>14%</span><span>16%</span><span>18%</span><span class="top">20%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec"><h2>As 7 metas</h2>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">💰 Vendas da loja</div><div class="quem">meta de todos</div></div>
+      <div class="pts">33 pts</div>
+    </div>
+    <div class="regua">Vender <b>R$ 1.500.000</b> de julho a setembro.</div>
+    <div class="numeros">
+      <div><div class="v">R$ 16.636</div><div class="l">por dia até 30/09</div></div>
+      <div><div class="v">R$ 116.450</div><div class="l">por semana</div></div>
+    </div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li><b>Loja:</b> prateleira vazia é venda perdida. Abasteça antes de faltar, não depois.</li>
+        <li><b>Caixa:</b> fila grande faz cliente largar o carrinho. Rapidez no caixa é venda que entra.</li>
+        <li><b>Cozinha:</b> vitrine cheia antes do pico do almoço vende muito mais que vitrine cheia depois.</li>
+        <li><b>Suprimentos:</b> produto que faltou é dinheiro que nunca entrou.</li>
+        <li><b>Delivery:</b> entrega no prazo é cliente que pede de novo na semana seguinte.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">👥 Time certo</div><div class="quem">meta de todos</div></div>
+      <div class="pts">33 pts</div>
+    </div>
+    <div class="regua">O tamanho da equipe precisa caber na venda que a equipe gera. Hoje somos mais gente do que a venda sustenta.</div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li>O único caminho para o time <b>crescer</b> é a loja <b>vender mais</b>. Venda maior sustenta mais gente. É nessa ordem, sempre.</li>
+        <li>Quanto mais cada um rende, mais forte fica a loja e maior fica o prêmio de todo mundo.</li>
+        <li>Aprenda a função do lado. Quem cobre duas áreas vale por duas e cresce mais rápido aqui dentro.</li>
+        <li>Não deixe tarefa pendurada para o próximo turno. O que volta atrasado custa duas vezes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">⏰ Presença e horário</div><div class="quem">meta sua, individual</div></div>
+      <div class="pts">33 pts</div>
+    </div>
+    <div class="regua">Estar aqui, no horário. E quando não der, avisar antes.</div>
+    <div class="numeros">
+      <div><div class="v">6</div><div class="l">atrasos de +15 min, cada um avisado antes</div></div>
+      <div><div class="v">1</div><div class="l">falta, avisada 1h antes</div></div>
+      <div><div class="v">1</div><div class="l">atestado no trimestre</div></div>
+    </div>
+    <div class="alerta">Atraso ou falta <b>sem aviso no prazo zera a meta inteira</b>, e com ela os 33 pontos. Avisar no grupo geral é o mínimo. Vale também para o descanso fora do horário.</div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li>Os números acima são <b>limite máximo</b>, não meta a cumprir. O ideal é zero.</li>
+        <li>Furou o pneu, passou mal, o ônibus atrasou? Manda no grupo geral <b>na hora</b>. Aviso dado, tolerância vale.</li>
+        <li>Quem falta sem avisar joga o serviço no colega e ainda derruba o próprio prêmio.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta super">
+    <div class="top">
+      <div><div class="tit">🥬 SUPER META: Perdas</div><div class="quem">meta de todos · vale quase o dobro</div></div>
+      <div class="pts">40 pts</div>
+    </div>
+    <div class="regua">Perder <b>menos de 4%</b> do que a loja vende, <b>em cada mês</b>.</div>
+    <div class="numeros">
+      <div><div class="v">3 de 3</div><div class="l">meses abaixo de 4% valem os 40 pontos</div></div>
+      <div><div class="v">2 de 3</div><div class="l">valem metade</div></div>
+    </div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li><b>Cozinha:</b> vocês são a maior arma da loja contra a perda. Fruta e verdura no ponto viram prato pronto em vez de virar lixo.</li>
+        <li><b>Loja:</b> o que chegou primeiro sai primeiro. Cuidado no manuseio e nada de empilhar demais.</li>
+        <li><b>Suprimentos:</b> comprar na medida certa e recusar mercadoria ruim já na porta.</li>
+        <li><b>Caixa:</b> peso ou código errado vira quebra no fim do mês, mesmo sem ninguém perceber na hora.</li>
+        <li>Achou algo perto do fim da validade? Avise agora. Amanhã já é prejuízo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">🚶 Clientes na loja</div><div class="quem">meta de todos</div></div>
+      <div class="pts">20 pts</div>
+    </div>
+    <div class="regua">Atender <b>19.200 clientes</b> de agosto a setembro.</div>
+    <div class="numeros">
+      <div><div class="v">356</div><div class="l">por dia útil</div></div>
+      <div><div class="v">258</div><div class="l">no sábado</div></div>
+      <div><div class="v">191</div><div class="l">domingo e feriado</div></div>
+    </div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li>Cliente bem atendido volta e ainda traz gente. É assim que esse número sobe.</li>
+        <li><b>Loja:</b> leve o cliente até o produto. Não aponte de longe.</li>
+        <li><b>Caixa:</b> bom dia olhando no olho, agilidade e troco certo.</li>
+        <li><b>Cozinha:</b> cheiro bom e vitrine bonita puxam quem só ia passar na porta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">📣 Nota da loja</div><div class="quem">meta de todos</div></div>
+      <div class="pts">20 pts</div>
+    </div>
+    <div class="regua">Fechar o trimestre com nota <b>acima de 85</b> na pesquisa que a gente manda para o cliente.</div>
+    <div class="pratica">
+      <div class="h">Na prática</div>
+      <ul>
+        <li>Essa nota é o cliente dizendo se recomendaria o Gran para um amigo. É o retrato mais honesto do nosso trabalho.</li>
+        <li><b>Caixa:</b> você é a última lembrança que o cliente leva da loja. Ela pesa mais que todas as outras.</li>
+        <li>Loja limpa, produto fresco e gente disposta. É isso que vira nota alta.</li>
+        <li>Cliente reclamou? Resolva na hora ou chame quem resolve. Problema resolvido rápido também vira nota boa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="top">
+      <div><div class="tit">🎯 A meta da sua função</div><div class="quem">só essa muda de pessoa pra pessoa</div></div>
+      <div class="pts">20 pts</div>
+    </div>
+    <div class="regua">Cada área tem um número próprio. O seu está na sua página exclusiva, e também no quadro abaixo.</div>
+  </div>
+
+</div>
+
+<div class="sec">
+  <h2>Ache a sua no quadro</h2>
+  <div class="card" style="padding:14px">
+    <table>
+      <tr><th>Sua área</th><th>Sua meta</th></tr>
+      <tr><td>Liderança, Caixa e Loja</td><td><b>Loja sem filas.</b> Nenhum caixa passa de 25 atendimentos em 1 hora. Acima de 20 já acende alerta, porque 20 é a meta do próximo trimestre. No máximo 1 vez por semana. Viu fila, puxa caixa. Vale de 03/08.</td></tr>
+      <tr><td>Equipe Gran Mesa<br><span style="font-weight:600;color:var(--czc);font-size:.82rem">cozinha Gran e suprimentos</span></td><td><b>Gran Mesa.</b> A equipe vender <b>R$ 130.000</b> de agosto a setembro. Cerca de <span class="num">R$ 2.130</span> por dia, ou <span class="num">R$ 14.900</span> por semana. Conta a venda somada do time, não a de cada um.</td></tr>
+      <tr><td>Cozinha GMPro</td><td><b>Saída no horário.</b> A Fiorino sai da loja para as obras até <b>10h20</b>, com a foto do Daniel mostrando o carro carregado e a equipe. Tolerância de 3 falhas no trimestre.</td></tr>
+      <tr><td>Estoque e Conferência</td><td><b>Compras sob controle.</b> Gastar com compras no máximo <b>62%</b> do que a loja vende, de agosto a setembro.</td></tr>
+      <tr><td>Delivery</td><td><b>Clientes no pico.</b> De segunda a sexta, das 16h30 às 19h30, atender <b>4.872 clientes</b> em agosto e setembro. Cerca de 116 por dia útil.</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>Como ler o seu painel</h2>
+  <div class="card">
+    <ol class="passos">
+      <li><b>O link é seu e só seu.</b> Ele abre a sua página, com o seu prêmio e as suas metas. Não compartilhe com ninguém.</li>
+      <li><b>Toda sexta o painel atualiza.</b> É o Radar. Os números da semana entram e as cores mudam.</li>
+      <li><b>Olhe as cores</b> de cada meta. Elas dizem se você está no caminho ou se precisa corrigir a rota.</li>
+      <li><b>Corrija durante o trimestre</b>, não no último dia. É pra isso que o painel existe.</li>
+    </ol>
+    <div class="cores" style="margin-top:14px">
+      <div class="c-ok">🟢 <b>No caminho.</b> Do jeito que está, os pontos são seus. Mantenha o ritmo.</div>
+      <div class="c-at">🟡 <b>Atenção.</b> Está perto, mas ainda não é seu. Dá tempo de recuperar.</div>
+      <div class="c-ri">🔴 <b>Em risco.</b> No ritmo de hoje, esses pontos não vêm. Hora de mudar alguma coisa.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>As datas que importam</h2>
+  <div class="card">
+    <div class="agenda">
+      <div class="ag"><div class="d">JULHO</div><div><div class="t">Mês de treino</div><div class="s">Os números aparecem como exemplo, pra todo mundo aprender a ler o painel. Só as vendas e as perdas já contam desde julho.</div></div></div>
+      <div class="ag"><div class="d">01/08</div><div><div class="t">Começa a valer de verdade</div><div class="s">Presença, clientes na loja, nota da loja e a meta da sua função passam a contar ponto.</div></div></div>
+      <div class="ag"><div class="d">03/08</div><div><div class="t">Começa a contagem das filas</div><div class="s">Placar zerado para quem tem a meta de fila.</div></div></div>
+      <div class="ag"><div class="d">07/08</div><div><div class="t">1º Radar que vale</div><div class="s">Primeira sexta com pontuação real no painel.</div></div></div>
+      <div class="ag"><div class="d">30/09</div><div><div class="t">Fim do trimestre</div><div class="s">Último dia pra somar ponto.</div></div></div>
+      <div class="ag"><div class="d">ATÉ 05</div><div><div class="t">Fechamento e apuração</div><div class="s">Do mês seguinte.</div></div></div>
+      <div class="ag"><div class="d">ATÉ 10</div><div><div class="t">Seu feedback individual</div><div class="s">Resultado, devolutiva e as metas do trimestre seguinte.</div></div></div>
+      <div class="ag"><div class="d">DIA 20</div><div><div class="t">Pagamento do prêmio</div><div class="s">Na conta de quem bateu.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2>Regras que protegem você</h2>
+  <div class="card">
+    <ul class="linhas">
+      <li><span class="bul">●</span><span><b>Discordou de uma pontuação?</b> Você tem <b>48 horas</b> depois de cada Radar pra falar com o RH trazendo suas evidências. É seu direito.</span></li>
+      <li><span class="bul">●</span><span><b>As metas não mudam no meio do caminho.</b> O que está escrito aqui vale até 30/09.</span></li>
+      <li><span class="bul">●</span><span><b>Seu valor é confidencial.</b> O painel da equipe mostra só pontos. Dinheiro aparece apenas na sua página exclusiva.</span></li>
+      <li><span class="bul">●</span><span><b>Advertência escrita ou suspensão</b> no trimestre tira a pessoa do programa neste trimestre. Ela volta no seguinte.</span></li>
+    </ul>
+  </div>
+</div>
+
+<a class="btn" href="index.html">📊 Ver o painel da equipe</a>
+
+<div class="fecho">
+  <div class="f1">Você não precisa ser perfeito.<br>Precisa estar no caminho toda sexta.</div>
+  <div class="f2">O painel existe pra você corrigir a rota durante o trimestre, e não pra descobrir no fim que faltou pouco. Olhe o seu link uma vez por semana. Isso já muda o jogo.</div>
+  <div class="f3">Ser Gran, e juntos ser SUPER.</div>
+</div>
+
+<div class="rodape">
+  Dúvida sobre qualquer coisa deste guia? Fale com o RH: (71) 99634-7896<br>
+  Programa Super Gran · Grupo A7 · 3º trimestre de 2026
+</div>
+
+</div>
+</body>
+</html>
