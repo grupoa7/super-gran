@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desafio Semanal Gran</title>
+<style>
+:root{
+--gran-verde:#1e4d2b; --gran-verde-2:#2d6a3f; --gran-verde-3:#3f8654;
+--gran-dourado:#c9a227; --gran-dourado-2:#e8b93a; --gran-dourado-bg:#faf1d4;
+--bg:#faf7ef; --card:#ffffff; --border:#e8e3d4;
+--ink:#1a1f1a; --ink-dim:#4a5248; --ink-mute:#8b8f86;
+--vermelho:#b8362f; --verde:#3f8654;
+--shadow:0 1px 2px rgba(30,77,43,.04), 0 4px 14px rgba(201,162,39,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 40px}
+
+.hero{background:linear-gradient(135deg,var(--gran-dourado) 0%,var(--gran-dourado-2) 100%);
+margin:0 -16px 0;padding:34px 24px 30px;text-align:center;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--gran-verde)}
+.selo{display:inline-block;background:rgba(30,77,43,.14);color:var(--gran-verde);font-size:11px;
+font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:12px}
+.hero h1{font-size:34px;font-weight:800;color:#fff;letter-spacing:-.6px;line-height:1.15;
+text-shadow:0 1px 2px rgba(30,77,43,.22)}
+.hero .quando{color:#fff;opacity:.95;font-size:15px;font-weight:600;margin-top:8px}
+
+.intro{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--gran-dourado);
+border-radius:0 0 16px 16px;padding:26px 24px;box-shadow:var(--shadow);margin-bottom:30px}
+.intro p{font-size:16px;color:var(--ink-dim);margin-bottom:14px}
+.intro p:last-child{margin-bottom:0}
+.intro strong{color:var(--gran-verde);font-weight:700}
+.destaque{background:var(--gran-dourado-bg);border-left:4px solid var(--gran-dourado);
+border-radius:0 10px 10px 0;padding:16px 18px;margin:20px 0 4px}
+.destaque p{font-size:16px;color:var(--ink);margin:0}
+
+h2{font-size:13px;font-weight:800;color:var(--gran-dourado);letter-spacing:1.4px;
+text-transform:uppercase;margin:34px 0 16px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:2px;background:var(--border)}
+
+.card{background:var(--card);border:1px solid var(--border);border-left:5px solid var(--gran-dourado);
+border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:var(--shadow)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.nome{font-size:19px;font-weight:800;color:var(--gran-verde);line-height:1.25}
+.quem{font-size:13px;color:var(--ink-mute);margin-top:3px}
+.premio{background:var(--gran-verde);color:var(--gran-dourado-2);font-weight:800;font-size:15px;
+padding:7px 15px;border-radius:22px;white-space:nowrap}
+.metalabel{font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:1.2px;
+font-weight:700;margin-top:16px}
+.meta{font-size:27px;font-weight:800;color:var(--ink);margin-top:2px;line-height:1.2}
+.bar{height:10px;background:#efece2;border-radius:6px;overflow:hidden;margin:14px 0 8px}
+.fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--gran-dourado),var(--gran-dourado-2))}
+.hoje{font-size:14px;color:var(--ink-dim)}
+.hoje b{color:var(--ink);font-weight:700}
+.hist{font-size:13.5px;color:var(--ink-mute);margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)}
+.hist b{color:var(--gran-verde-3);font-weight:700}
+
+.box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+.box ul{list-style:none}
+.box li{font-size:15.5px;color:var(--ink-dim);padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--border)}
+.box li:last-child{border-bottom:none}
+.box li::before{content:"";position:absolute;left:6px;top:18px;width:8px;height:8px;
+border-radius:50%;background:var(--gran-dourado)}
+.box li b{color:var(--gran-verde);font-weight:700}
+
+.cal{width:100%;border-collapse:collapse;font-size:15px}
+.cal td{padding:11px 4px;border-bottom:1px solid var(--border);color:var(--ink-dim)}
+.cal tr:last-child td{border-bottom:none}
+.cal td:first-child{font-weight:800;color:var(--gran-verde);white-space:nowrap;width:38%}
+
+.ganho{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.escada{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;justify-content:center}
+.degrau{flex:1;min-width:118px;background:var(--gran-dourado-bg);border:1px solid #e6d9a8;
+border-radius:12px;padding:14px 10px;text-align:center}
+.degrau.bonus{background:var(--gran-verde);border-color:var(--gran-verde)}
+.dsem{font-size:11.5px;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.6px;font-weight:700;line-height:1.35}
+.degrau.bonus .dsem{color:var(--gran-dourado-2)}
+.dval{font-size:23px;font-weight:800;color:var(--gran-verde);margin-top:6px}
+.degrau.bonus .dval{color:#fff}
+.seta{display:flex;align-items:center;font-size:20px;font-weight:800;color:var(--gran-dourado)}
+.total{margin-top:18px;padding-top:18px;border-top:2px dashed var(--border);text-align:center}
+.tlabel{font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:1.2px;font-weight:700}
+.tval{font-size:40px;font-weight:800;color:var(--gran-dourado);line-height:1.1;margin:4px 0 8px;
+text-shadow:0 1px 0 rgba(30,77,43,.08)}
+.tnota{font-size:13.5px;color:var(--ink-dim);max-width:460px;margin:0 auto}
+@media(max-width:520px){.seta{display:none}.degrau{min-width:calc(50% - 4px)}.tval{font-size:34px}}
+
+.foot{text-align:center;margin:38px 0 6px}
+.foot .lema{font-size:17px;font-weight:800;color:var(--gran-verde)}
+.foot .lema span{color:var(--gran-dourado)}
+@media(max-width:520px){.hero h1{font-size:27px}.meta{font-size:23px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="selo">Premiação extra</div>
+  <h1>Desafio Semanal Gran</h1>
+  <div class="quando">Começa quarta, 5 de agosto</div>
+</div>
+
+<div class="wrap">
+<div class="intro">
+  <p>Você já conhece o <strong>Super Gran</strong>, que premia o resultado do trimestre inteiro. O <strong>Desafio Semanal Gran</strong> é o que vem por cima dele.</p>
+
+  <p>São cinco metas, uma para cada frente da loja. Toda semana que a sua frente bate a meta, o grupo ganha <strong>1 ponto</strong>. Com <strong>2 pontos</strong>, sai voucher de <strong>R$ 100 para cada pessoa</strong> do grupo. E o melhor: as duas semanas não precisam ser seguidas.</p>
+
+  <p>O prêmio é <strong>igual para todo mundo</strong>, em qualquer uma das cinco frentes. Cada meta tem o seu tamanho e o seu esforço, e todas valem o mesmo.</p>
+
+  <p>As metas daqui foram montadas em cima dos mesmos números que valem no Super Gran. Ou seja, <strong>cada semana que você bate aqui, você caminha junto para bater o trimestre lá</strong>. É o mesmo esforço rendendo duas vezes.</p>
+
+  <div class="destaque">
+    <p><strong>E olha só:</strong> nenhuma dessas metas é invenção. Todas já foram alcançadas por esta loja, com esta equipe. A gente não está pedindo nada que vocês nunca fizeram. Está convidando vocês a fazer de novo, e a serem reconhecidos por isso toda quinzena.</p>
+  </div>
+</div>
+
+<h2>Quanto você pode ganhar</h2>
+<div class="ganho">
+  <div class="escada">
+    <div class="degrau">
+      <div class="dsem">2 semanas batidas</div>
+      <div class="dval">R$ 100</div>
+    </div>
+    <div class="seta">+</div>
+    <div class="degrau">
+      <div class="dsem">mais 2 semanas</div>
+      <div class="dval">R$ 100</div>
+    </div>
+    <div class="seta">+</div>
+    <div class="degrau bonus">
+      <div class="dsem">bônus por 4 seguidas</div>
+      <div class="dval">R$ 100</div>
+    </div>
+  </div>
+  <div class="total">
+    <div class="tlabel">Batendo todas as semanas do mês</div>
+    <div class="tval">R$ 300 por mês</div>
+    <div class="tnota">São R$ 200 pelos dois pares de semanas, mais R$ 100 de bônus por emendar as 4 seguidas. Todo mês, para cada pessoa do grupo.</div>
+  </div>
+</div>
+
+<h2>As cinco metas</h2>
+
+<div class="card">
+  <div class="top">
+    <div><div class="nome">Loja e Motorista</div>
+    <div class="quem">Alyne, Grasiela, Jilney, Luciene, Jamilton, Adilson, Diego, Jeane e Alan</div></div>
+    <div class="premio">R$ 100</div>
+  </div>
+  <div class="metalabel">Meta da semana</div>
+  <div class="meta">2.300 clientes</div>
+  <div class="bar"><div class="fill" style="width:92%"></div></div>
+  <div class="hoje">Na semana passada vocês chegaram em <b>2.121 clientes</b>. Faltaram só 179, ou seja, <b>92% do caminho já está feito</b>.</div>
+  <div class="hist">Essa marca já foi batida em <b>45 das últimas 98 semanas</b>. No começo de 2025, foram 11 semanas seguidas acima dela.</div>
+</div>
+
+<div class="card">
+  <div class="top">
+    <div><div class="nome">Gran Mesa</div>
+    <div class="quem">Magno, Manu e Solange</div></div>
+    <div class="premio">R$ 100</div>
+  </div>
+  <div class="metalabel">Meta da semana</div>
+  <div class="meta">R$ 16.500 em vendas</div>
+  <div class="bar"><div class="fill" style="width:77%"></div></div>
+  <div class="hoje">Na semana passada foram <b>R$ 12.726</b>, ou 77% do caminho. Para chegar lá, são <b>R$ 2.357 por dia</b>.</div>
+  <div class="hist">Já foi alcançado em <b>45 das últimas 98 semanas</b>. No terceiro trimestre de 2025, a média semanal foi de <b>R$ 17.043</b>, acima da meta de agora.</div>
+</div>
+
+<div class="card">
+  <div class="top">
+    <div><div class="nome">Gran Mesa Pro</div>
+    <div class="quem">Fernanda e Joselene</div></div>
+    <div class="premio">R$ 100</div>
+  </div>
+  <div class="metalabel">Meta da semana</div>
+  <div class="meta">CMV abaixo de 52%</div>
+  <div class="hoje">Medido pela média das últimas 4 semanas. O número chega toda semana pela Mayara.</div>
+  <div class="hist">Quanto melhor o aproveitamento do que entra na cozinha, <b>menor o CMV</b>. Cada quilo bem usado conta.</div>
+</div>
+
+<div class="card">
+  <div class="top">
+    <div><div class="nome">Granel</div>
+    <div class="quem">Emilly</div></div>
+    <div class="premio">R$ 100</div>
+  </div>
+  <div class="metalabel">Meta da semana</div>
+  <div class="meta">R$ 4.000 em vendas</div>
+  <div class="bar"><div class="fill" style="width:57%"></div></div>
+  <div class="hoje">Na semana passada foram <b>R$ 2.284</b>, ou 57% do caminho. É a meta mais desafiadora das cinco.</div>
+  <div class="hist">Já foi alcançado em <b>21 das últimas 98 semanas</b>. No fim de 2024 foram 10 semanas seguidas acima dela. O caminho passa por <b>disciplina no porcionamento</b>.</div>
+</div>
+
+<div class="card">
+  <div class="top">
+    <div><div class="nome">Retaguarda</div>
+    <div class="quem">Sandro</div></div>
+    <div class="premio">R$ 100</div>
+  </div>
+  <div class="metalabel">Meta da semana</div>
+  <div class="meta">Tudo que está na retaguarda também está na loja</div>
+  <div class="hoje">No sábado, ao fim do trabalho, foto da retaguarda completa com pallets e refrigerações abertas. Cada produto que aparecer ali precisa de uma foto dele exposto na loja.</div>
+  <div class="hist">Quanto menos produto guardado, menos foto para tirar. Compramos pela média de venda, então <b>produto na retaguarda é venda parada</b>. O lugar dele é na frente do cliente.</div>
+</div>
+
+<h2>Como funciona</h2>
+<div class="box">
+<ul>
+  <li>A semana vai de <b>quarta a terça</b>.</li>
+  <li>Bateu a meta na semana, o grupo ganha <b>1 ponto</b>.</li>
+  <li>Com <b>2 pontos</b> sai voucher de <b>R$ 100 por pessoa</b>, e as duas semanas <b>não precisam ser seguidas</b>.</li>
+  <li>Emendou <b>4 semanas seguidas</b>, vem um <b>voucher extra de R$ 100</b> para cada pessoa do grupo.</li>
+  <li>O prêmio é <b>igual nas cinco frentes</b>. Toda meta vale o mesmo.</li>
+  <li>O voucher é usado aqui na loja.</li>
+  <li>Quem teve <b>qualquer falta na semana não participa</b> daquela rodada, mesmo com atestado. A premiação é um extra e depende do time completo.</li>
+  <li>O resultado sai na <b>quinta de manhã</b> e é apresentado na reunião das 13h.</li>
+</ul>
+</div>
+
+<h2>Calendário da semana</h2>
+<div class="box">
+<table class="cal">
+  <tr><td>Quarta</td><td>Começa a semana com a meta nova</td></tr>
+  <tr><td>Sábado</td><td>Sandro fotografa a retaguarda</td></tr>
+  <tr><td>Segunda e terça</td><td>Marize confere as fotos</td></tr>
+  <tr><td>Terça</td><td>Fecha a semana</td></tr>
+  <tr><td>Quinta de manhã</td><td>Resultado no painel e no grupo</td></tr>
+  <tr><td>Quinta, 13h</td><td>Reunião de resultados</td></tr>
+</table>
+</div>
+
+<div class="foot">
+  <div class="lema">Ser Gran, e juntos ser <span>SUPER</span>.</div>
+</div>
+</div>
+</body>
+</html>
